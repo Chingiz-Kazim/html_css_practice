@@ -1,8 +1,19 @@
 #product-overview {
-    background: url("freedom.jpg");
+    /* background: url("./images/freedom.jpg"); */
+    background-image: url("./images/freedom.jpg");
+    background-size: cover;
+    background-position: 0% 10%;
+    background-repeat: no-repeat;
+    /* здесь он убирает все вокруг отступы // варианты: content-box, border-box*/
+    background-origin: border-box;
+    /* здесь он держит картинку или в рамке или залезая на рамку вокруг // padding-box, border-box, content-box*/
+    background-clip: border-box;
     width: 100%;
     height: 528px;
-    padding: 10px;   
+    padding: 10px;
+    margin-top: 43px;
+    border: 5px dashed red;
+    position: relative;
 }
 
 .section-title {
@@ -13,6 +24,8 @@
 #product-overview h1 {
     color: white;
     font-family: 'Anton', sans-serif;
+    bottom: 5%;
+    left: 3%;
 }
 
 .plan {
@@ -110,5 +123,3 @@
 /* h1 {
     font-family: sans-serif;
 } */
-
-
