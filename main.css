@@ -1,143 +1,131 @@
 #product-overview {
-    background:linear-gradient(to top, rgba(80,68,18,0.6) 10%, transparent), url("./images/freedom.jpg") left 10% bottom 70%/cover no-repeat border-box;
-    /* background-image: url("./images/freedom.jpg"); */
-    /* background-size: cover; */
-    /* background-position: left 10% bottom 20%; */
-    /* background-repeat: no-repeat; */
-    /* здесь он убирает все вокруг отступы // варианты: content-box, border-box*/
-    /* background-origin: border-box; */
-    /* здесь он держит картинку или в рамке или залезая на рамку вокруг // padding-box, border-box, content-box*/
-    /* background-clip: border-box; */
-    /* здесь переход одного цвета в другой,можно давать под каким углом или же откуда начало */
-    /* background-image: linear-gradient(to bottom, red 20%, transparent); */
-    /* это свойство тоже микс цветов но уже в середину сходится */
-    /* background-image: radial-gradient(circle at top left, red,blue); */
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+      url("images/freedom.jpg") center/cover no-repeat border-box,
+      #ff1b68;
+    /* background-image: url("freedom.jpg");
+      background-size: cover;
+      background-position: left 10% bottom 20%; */
+    /* background-repeat: no-repeat;
+      background-origin: border-box;
+      background-clip: border-box; */
+    /* background-image: linear-gradient(180deg, red 70%, blue 60%, rgba(0,0,0,0.5)); */
+    /* background-image: radial-gradient(ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
     width: 100vw;
     height: 33vh;
-    margin-top: 2.75rem;
     /* border: 5px dashed red; */
     position: relative;
-}
-
-.section-title {
-    color: #2ddf5c;
-    text-align: center;
-}
-
-#product-overview h1 {
+  }
+  
+  #product-overview h1 {
     color: white;
-    font-family: 'Anton', sans-serif;
+    font-family: "Anton", sans-serif;
     position: absolute;
     bottom: 5%;
     left: 3%;
     font-size: 1.6rem;
-}
-
-@media (min-width: 40rem){
-    #product-overview{
-        height: 40vh;
-        background-position: 50% 25%;
+  }
+  
+  @media (min-width: 40rem) and (min-height: 40rem) {
+    #product-overview {
+      height: 40vh;
+      background-position: 50% 25%;
     }
-
-    #product-overview h1{
-        font-size: 3rem;
+  
+    #product-overview h1 {
+      font-size: 3rem;
     }
-}
-
-@media (min-width: 60rem){
-    #product-overview{
-        height: 50vh;
-        background-position: 50% 25%;
-    }
-
-    #product-overview h1{
-        font-size: 5rem; 
-    }
-}
-
-.plan__list{
-    width: 80%;
-    margin: auto;
+  }
+  
+  .section-title {
+    color: #2ddf5c;
     text-align: center;
-}
-
-.plan {
+  }
+  
+  .plan {
     background: #d5ffdc;
     text-align: center;
     padding: 1rem;
-    margin: 0.5rem;
-    display: inline-block;
-    width: 30%;
-    vertical-align: middle;
-}
-
-.plan--highlighted {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .plan--highlighted {
     background: #19b84c;
     color: white;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-.plan__annotation {
+  }
+  
+  .plan__annotation {
     background: white;
     color: #19b84c;
     padding: 0.5rem;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
-}
-
-.plan__title {
+  }
+  
+  .plan__title {
     color: #0e4f1f;
-}
-
-.plan__price {
+  }
+  
+  .plan__price {
     color: #858585;
-}
-
-.plan--highlighted .plan__title {
+  }
+  
+  .plan--highlighted .plan__title {
     color: white;
-}
-
-.plan--highlighted .plan__price {
+  }
+  
+  .plan--highlighted .plan__price {
     color: #0e4f1f;
-}
-
-.plan__features {
+  }
+  
+  .plan__features {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.plan__feature {
+  }
+  
+  .plan__feature {
     margin: 0.5rem 0;
-}
-
-
-
-#key-features {
+  }
+  
+  @media (min-width: 40rem) {
+    .plan__list {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .plan {
+      display: inline-block;
+      width: 30%;
+      vertical-align: middle;
+      min-width: 13rem;
+      max-width: 25rem;
+    }
+  
+    .plan--highlighted {
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  #key-features {
     background: #ff1b68;
     margin-top: 5rem;
-    padding: 2rem;
-}
-
-#key-features .section-title {
+    padding: 1rem;
+  }
+  
+  #key-features .section-title {
     color: white;
     margin: 2rem;
-}
-
-.key-feature__list {
+  }
+  
+  .key-feature__list {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-.key-feature {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-}
-
-.key-feature__image {
+  }
+  
+  .key-feature__image {
     background: #ffcede;
     width: 128px;
     height: 128px;
@@ -145,17 +133,29 @@
     border-radius: 50%;
     margin: auto;
     padding: 1.5rem;
-}
-
-.key-feature__description {
+  }
+  
+  .key-feature__description {
     text-align: center;
     font-weight: bold;
     color: white;
     font-size: 1.2rem;
-}
-
-
-.modal {
+  }
+  
+  @media (min-width: 40rem) {
+    .key-feature {
+      display: inline-block;
+      width: 30%;
+      max-width: 25rem;
+      vertical-align: top;
+    }
+  }
+  
+  /* h1 {
+      font-family: sans-serif;
+  } */
+  
+  .modal {
     position: fixed;
     display: none;
     z-index: 200;
@@ -203,7 +203,3 @@
     background: #ff5454;
     border-color: #ff5454;
   }
-
-/* h1 {
-    font-family: sans-serif;
-} */
